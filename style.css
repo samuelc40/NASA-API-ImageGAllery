@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: block;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* min-height: 100vh; */
+    /* background: url('Galaxy.jpg');  */
+    /* background-size: contain; */
+    /* background-repeat: repeat-x; */
+    /* overflow-y: scroll; */
+    /* overflow-x: hidden; */
+    /*  */
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    color: aliceblue;
+}
+
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('Galaxy.jpg'); 
+    background-size: contain;
+    background-repeat: repeat-x;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+    /* width: 100%;
+    height: 100%; */
+
+}
+
+.logo {
+    margin-left: 5vw;
+}
+
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* .image-container img {
+    margin: 20px; 
+    box-sizing: border-box;
+    width: 13vw;
+    height: 13vw;
+} */
+
+#details-container {
+    display: none;
+    position: fixed;
+    top: 20%;
+    margin: 100px;
+    align-items: center;
+    background-size: 100%;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    color: #f1f1f1;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    object-fit: contain; /* Scale the background image to fit within the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center; /* Center the background image */
+    /* Additional styles as needed */
+    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+    min-height: 40%; /* Allow the container's height to adjust based on content */
+}
+
+
+/* Style for the details */
+#details {
+    text-align: center;
+}
+
+/* Style for the close button */
+/* .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+} */
+
+.icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px;
+    cursor: pointer;
+}
+
+/* CSS for responsive card layout */
+ /* .image-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+} */
+
+
+.card {
+    /* display: grid; */
+    width: 27vw; /* Adjust as needed for responsive design */
+    height: 27vw;
+    margin: 3%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+@media screen and (max-width: 1489px) {
+    .main-div {
+        background-size: cover;
+        align-items: center;
+        justify-content: center;
+    }
+    /* .logo {
+        margin-left: 50px;
+    } */
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 10px;
+        padding: 10px;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    #details-container {
+        margin: 10px;
+        top:10%;
+    }
+    
+}
+
+@media screen and (max-width: 782px) {
+    .text-fluid {
+        font-size: 10px;
+    }
+    .card img {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    #details-container {
+        font-size: 12px;
+    }
+
+    .text-fluid {
+        font-size: 9px;
+    }
+
+    .card {
+        object-fit: cover;
+    }
+
+}
+
+/*------------------ ScrollBar style----------------- */
+
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 5px; /* Roundness of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
